@@ -1,28 +1,19 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-}
-
-* {
     font-family: Inter, sans-serif;
     color: black;
 }
 
 .anchor {
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     text-decoration: none;
 }
 
 header, footer {
     display: flex;
     align-items: center;
-    height: 5vh;
     flex-shrink: 0;
     background: white;
 }
@@ -30,6 +21,7 @@ header, footer {
 header {
     border-bottom: 1px solid black;
     justify-content: space-between;
+    padding: 10px 20px;
 }
 
 nav {
@@ -50,51 +42,44 @@ nav a {
 footer {
     border-top: 1px solid black;
     justify-content: space-around;
+    padding: 10px 20px;
 }
 
 main {
     background: white;
-    height: 80vh;
-}
-
-main > section {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-section:first-child {
     text-align: center;
-    width: 440px;
-    margin-top: 20px;
-}
-section:last-child {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
+    padding: 20px;
 }
 
-section > h1 {
+#intro {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#intro h1 {
+    font-size: 28px;
     margin: 10px;
-    font-size: 48px;
 }
 
-section > p {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+#price-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
 }
 
 .card {
     width: 200px;
-    height: 250px;
+    height: 300px;
     flex-shrink: 0;
     border-radius: 10px;
     border: 1px solid black;
     background: #F5F5F5;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 10px;
     text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-header {
@@ -102,42 +87,105 @@ section > p {
 }
 
 h4 {
-    font-size: 16px;
-    font-style: normal;
+    font-size: 18px;
     font-weight: 700;
-    line-height: normal;
 }
 
-.card-body > h3 {
-    margin: 10px;
+.card-body h3 {
     font-size: 24px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
 }
 
-.card-body > p {
-    margin: 5px;
+.card-body p {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    margin: 5px 0;
 }
 
-.card-body > button {
+.card-body button {
     width: 130px;
     height: 35px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 10px;
     border-radius: 10px;
     background: #C0E8FF;
-    text-align: center;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#comparison {
+    margin: 20px auto 100px auto;
+    width: 90%;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+thead {
+    background-color: #F5F5F5;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #intro h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px auto;
+        height: auto;
+    }
+
+    .card-body button {
+        width: 100%;
+    }
+
+    #comparison {
+        width: 90%;
+    }
+
+    table {
+        font-size: 14px;
+    }
 }
